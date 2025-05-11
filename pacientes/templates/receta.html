@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 1cm;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            width: 100%;
+        }
+
+        .receta {
+            width: 100%;
+            height: 47%;
+            padding: 10px;
+            border-bottom: 1px dashed black;
+        }
+
+        .cabecera {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+        }
+
+        .datos-doctor {
+            text-align: right;
+            font-size: 12px;
+        }
+
+        .seccion {
+            margin: 5px 0;
+        }
+
+        .seccion strong {
+            display: inline-block;
+            width: 110px;
+        }
+    </style>
+</head>
+<body>
+    {% for i in "x"|ljust:"2" %}
+    <div class="receta">
+        <div class="cabecera">
+            <img src="{{ logo_path }}" class="logo" alt="Logo">
+            <div class="datos-doctor">
+                <strong>Dr. José González</strong><br>
+                Cédula Profesional: 12345678
+            </div>
+        </div>
+
+        <div class="seccion"><strong>Paciente:</strong> {{ consulta.paciente.nombre }}</div>
+        <div class="seccion"><strong>Fecha:</strong> {{ consulta.fecha|date:"d/m/Y H:i" }}</div>
+        <div class="seccion"><strong>Nacimiento:</strong> {{ consulta.paciente.fecha_nacimiento }}</div>
+
+        <div class="seccion"><strong>Motivo:</strong> {{ consulta.motivo }}</div>
+        <div class="seccion"><strong>Antecedentes:</strong> {{ consulta.antecedentes }}</div>
+
+        <div class="seccion"><strong>Signos Vitales:</strong><br />
+            FC: {{ consulta.frecuencia_cardiaca }} bpm |
+            FR: {{ consulta.frecuencia_respiratoria }} rpm |
+            PA: {{ consulta.presion_arterial }} |
+            Glucometría: {{ consulta.glucometria }} |
+            Oximetría: {{ consulta.oximetria }}% |
+            Peso: {{ consulta.peso }} kg |
+            Talla: {{ consulta.talla }} m
+        </div>
+
+        <div class="seccion"><strong>Diagnóstico:</strong> {{ consulta.diagnostico }}</div>
+        <div class="seccion"><strong>Tratamiento:</strong> {{ consulta.tratamiento }}</div>
+    </div>
+    {% endfor %}
+</body>
+</html>
