@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recetas Médicas Doble</title>
+  <style>
+    @page {
+      size: letter portrait;
+      margin: 1cm;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: white;
+    }
+
+    .hoja {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .receta {
+      width: 100%;
+      height: 48%;
+      box-sizing: border-box;
+      padding: 20px;
+      border: 1px solid #ccc;
+      position: relative;
+    }
+
+    .divisor {
+      width: 100%;
+      text-align: center;
+      margin: 5px 0;
+      border-top: 1px dashed #999;
+      font-size: 12px;
+      color: #777;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .header img {
+      height: 50px;
+    }
+
+    .header h2 {
+      flex: 1;
+      text-align: center;
+      font-size: 16px;
+      color: #23446a;
+      margin: 0;
+    }
+
+    .section {
+      margin-bottom: 6px;
+    }
+
+    .section h3 {
+      font-size: 13px;
+      color: #4f709c;
+      margin: 6px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .datos, .signos {
+      font-size: 12px;
+    }
+
+    .firma {
+      text-align: right;
+      font-style: italic;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .fecha {
+      font-size: 11px;
+      text-align: right;
+    }
+
+    .tratamiento p {
+      margin: 3px 0;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hoja">
+    <!-- Receta superior -->
+    <div class="receta">
+      <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/UANL_logo.svg/1200px-UANL_logo.svg.png" alt="Logo" />
+        <h2>Consultorio Médico Gondur<br>Dr. José Martín González Durán</h2>
+        <div class="fecha">Fecha: 5 mayo 2025</div>
+      </div>
+
+      <div class="section datos">
+        <strong>Paciente:</strong> José Martín González Durán<br>
+        <strong>Edad:</strong> 27 años 5 meses<br>
+        <strong>Fecha de nacimiento:</strong> 1 de octubre de 1996<br>
+        <strong>Antecedentes:</strong> DM2, HTA
+      </div>
+
+      <div class="section tratamiento">
+        <h3>Tratamiento</h3>
+        <p><strong>Paracetamol 500 mg</strong><br>Tomar 1 tab cada 8h por 5 días</p>
+        <p><strong>Loratadina 10 mg</strong><br>Tomar 1 tab cada 8h por 5 días</p>
+        <p><strong>Fenocol jarabe</strong><br>Tomar 10 ml cada 8h por 5 días</p>
+      </div>
+
+      <div class="section signos">
+        <h3>Signos vitales</h3>
+        T/A: ____ &nbsp;&nbsp; Sat O2: ____ &nbsp;&nbsp; FC: ____<br>
+        FR: ____ &nbsp;&nbsp; Temp: ____ &nbsp;&nbsp; Talla: ____ &nbsp;&nbsp; Peso: ____
+      </div>
+
+      <div class="firma">Firma: _______________________</div>
+    </div>
+
+    <!-- Línea punteada de corte -->
+    <div class="divisor">--- Cortar aquí ---</div>
+
+    <!-- Receta inferior (idéntica o puedes generar otra distinta) -->
+    <div class="receta">
+      <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/UANL_logo.svg/1200px-UANL_logo.svg.png" alt="Logo" />
+        <h2>Consultorio Médico Gondur<br>Dr. José Martín González Durán</h2>
+        <div class="fecha">Fecha: 5 mayo 2025</div>
+      </div>
+
+      <div class="section datos">
+        <strong>Paciente:</strong> José Martín González Durán<br>
+        <strong>Edad:</strong> 27 años 5 meses<br>
+        <strong>Fecha de nacimiento:</strong> 1 de octubre de 1996<br>
+        <strong>Antecedentes:</strong> DM2, HTA
+      </div>
+
+      <div class="section tratamiento">
+        <h3>Tratamiento</h3>
+        <p><strong>Paracetamol 500 mg</strong><br>Tomar 1 tab cada 8h por 5 días</p>
+        <p><strong>Loratadina 10 mg</strong><br>Tomar 1 tab cada 8h por 5 días</p>
+        <p><strong>Fenocol jarabe</strong><br>Tomar 10 ml cada 8h por 5 días</p>
+      </div>
+
+      <div class="section signos">
+        <h3>Signos vitales</h3>
+        T/A: ____ &nbsp;&nbsp; Sat O2: ____ &nbsp;&nbsp; FC: ____<br>
+        FR: ____ &nbsp;&nbsp; Temp: ____ &nbsp;&nbsp; Talla: ____ &nbsp;&nbsp; Peso: ____
+      </div>
+
+      <div class="firma">Firma: _______________________</div>
+    </div>
+  </div>
+</body>
+</html>
